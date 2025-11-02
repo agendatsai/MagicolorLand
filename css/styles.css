@@ -1,0 +1,42 @@
+
+:root{--brand:#ff6a00;--ink:#111;--muted:#666;--bg:#fff}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,'Noto Sans TC',sans-serif;color:var(--ink);background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.topbar{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:9}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-weight:700}
+.nav a{margin-left:16px;text-decoration:none;color:var(--ink)}
+.nav .btn{margin-left:16px}
+.btn{display:inline-block;padding:10px 16px;border:1px solid #ddd;border-radius:8px;text-decoration:none;cursor:pointer}
+.btn.primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+.hero{padding:48px 0;background:linear-gradient(180deg,#fff,#fff6f0)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.hero h1{font-size:clamp(24px,3.4vw,40px);margin:.2em 0}
+.highlight{background:linear-gradient(transparent 60%, #ffe1cc 0)}
+.hero__img img{width:100%;border-radius:12px;box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.bullets{padding-left:18px;margin:12px 0;color:var(--muted)}
+.features{padding:40px 0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature img{width:100%;border-radius:12px}
+.models{padding:16px 0 32px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card__body{padding:16px;display:flex;flex-direction:column;gap:12px}
+.proof{padding:40px 0;background:#fafafa;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.proof__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.proof img{width:100%;border-radius:12px;background:#fff}
+.note{color:var(--muted);font-size:14px}
+.buy{padding:32px 0}
+.buy__form{display:flex;flex-wrap:wrap;gap:12px;align-items:end}
+.buy__form label{display:flex;flex-direction:column;font-size:14px}
+.buy__form input,.buy__form select{padding:8px 10px;border:1px solid #ddd;border-radius:8px;min-width:180px}
+.hint{margin-top:8px;color:var(--brand)}
+.faq{padding:24px 0 60px}
+.faq details{padding:12px;border-bottom:1px solid #eee}
+.footer{padding:24px 0;color:var(--muted);font-size:14px;border-top:1px solid #eee;background:#fff}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .grid-3,.cards,.proof__grid{grid-template-columns:1fr}
+}
